@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "Gab Soulavy",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  }
 }
