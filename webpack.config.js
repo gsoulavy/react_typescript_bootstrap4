@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
+    devtool: 'source-map',
     output: {
         path: path.join(__dirname, '/wwwroot'),
         filename: 'index.bundle.js' 
