@@ -23,6 +23,8 @@ module.exports = {
     },
     plugins: [
         new cleanWebpackPlugin([path.resolve(__dirname, 'wwwroot')]),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
         })
