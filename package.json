@@ -1,17 +1,16 @@
 {
-  "name": "react_webpack",
+  "name": "react_webpack_starter",
   "version": "1.0.0",
-  "description": "react webpack starter",
+  "description": "easy react webpack starter",
   "main": "index.js",
+  "repository": "https://gsoulavy-web.visualstudio.com/_git/React_Webpack_Starter",
+  "author": "Gab Soulavy <g.soulavy@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "Gab Soulavy",
-  "license": "MIT",
-  "repository": "https://gsoulavy-web.visualstudio.com/_git/Webpack_Transp_And_Building_JS",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.44",
     "@babel/polyfill": "^7.0.0-beta.44",
@@ -19,13 +18,12 @@
     "@babel/preset-react": "^7.0.0-beta.44",
     "babel-loader": "^8.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.19",
-    "html-webpack-plugin": "^3.1.0",
-    "http-server": "^0.11.1",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
   },
   "dependencies": {}
 }
