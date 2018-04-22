@@ -7,20 +7,19 @@ const precss = require('precss');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: ['tether', 'font-awesome/scss/font-awesome.scss', './src/style/main.scss', './src/index.js'],
+    entry: ['tether', 'font-awesome/scss/font-awesome.scss', './src/style/main.scss', './src/index.tsx'],
     devtool: 'source-map',
     output: {
         path: path.join(__dirname, '/wwwroot'),
         filename: 'index.bundle.js' 
     },
+    resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                loader: 'ts-loader',
             },
             // css
             {
