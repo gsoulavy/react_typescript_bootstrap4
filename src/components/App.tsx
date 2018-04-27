@@ -1,17 +1,17 @@
 import * as React from "react";
-import * as B from "./bootstrap/Bootstrap";
+import * as Bs4 from "./bootstrap/Bootstrap";
 
 const { Component } = React;
 
 class App extends Component<{}, {}> {
     render() {
         return (
-            <B.Container>
-                <B.Jumbotron>
+            <Bs4.ContainerFluid>
+                <Bs4.Jumbotron>
                     <h1>React App on TypeScript</h1>
                     <sub>with Bootstrap4 and font-awesome managed by Yarn!</sub>
-                </B.Jumbotron>
-            </B.Container>
+                </Bs4.Jumbotron>
+            </Bs4.ContainerFluid>
         );
     }
 }
