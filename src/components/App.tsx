@@ -1,14 +1,18 @@
 import * as React from "react";
+import * as B from "./bootstrap/Bootstrap";
 
-class App extends React.Component<{}, {}> {
+const { Component } = React;
+
+class App extends Component<{}, {}> {
     render() {
         return (
-            <div className="container">
-                <div className="jumbotron">
+            <B.Container>
+                <B.Jumbotron>
                     <h1>React App on TypeScript</h1>
                     <sub>with Bootstrap4 and font-awesome managed by Yarn!</sub>
-                </div>
-            </div>);
+                </B.Jumbotron>
+            </B.Container>
+        );
     }
 }
 
