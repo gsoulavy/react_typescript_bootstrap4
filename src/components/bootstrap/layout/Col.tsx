@@ -3,34 +3,44 @@ import * as helper from "./../helpers/StatelessHelper";
 import * as SuperProps  from "./../interfaces/IComponentProps";
 
 interface Props extends SuperProps.default {
-    col?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
+    col?: number | boolean | string;
+    sm?: number | boolean | string;
+    md?: number | boolean | string;
+    lg?: number | boolean | string;
+    xl?: number | boolean | string;
 }
 
 const Col: React.StatelessComponent<Props> = (prop) => {
     let classResult = "";
 
     if (!!prop.col) {
-        classResult = `col-${prop.col}`;
+        let subResult = "";
+        if (typeof prop.col === "number") {
+            subResult = `col-${prop.col}`;
+        }
+        if (typeof prop.col === "string" && prop.col == "auto") {
+            subResult = "col-auto";
+        }
+        if (typeof prop.col === "boolean" && prop.col) {
+            subResult = "col"
+        }
+        classResult = subResult;
     }
 
     if (!!prop.sm) {
-        classResult += ` col-sm-${prop.sm}`;
+        classResult += ` ${buildClassAttribute("sm", prop.sm)}`;
     }
 
     if (!!prop.md) {
-        classResult += ` col-md-${prop.md}`;
+        classResult += ` ${buildClassAttribute("md", prop.md)}`;
     }
 
     if (!!prop.lg) {
-        classResult += ` col-lg-${prop.lg}`;
+        classResult += ` ${buildClassAttribute("ls", prop.lg)}`;
     }
 
     if (!!prop.xl) {
-        classResult += ` col-xl-${prop.xl}`;
+        classResult += ` ${buildClassAttribute("xl", prop.xl)}`;
     }
 
     if (classResult.length == 0) {
@@ -41,5 +51,20 @@ const Col: React.StatelessComponent<Props> = (prop) => {
         <div className={helper.mergeClassName(classResult).trim()}>{prop.children}</div>
     );
 };
+
+function buildClassAttribute(size: string, value: string | boolean | number): string {
+    let subResult = "";
+    if (typeof value === "number") {
+        subResult = `col-${size}-${value}`;
+    }
+    if (typeof value === "string" && value == "auto") {
+        subResult = `col-${size}-auto`;
+    }
+    if (typeof value === "boolean" && value) {
+        subResult = `col-${size}`
+    }
+    return subResult;
+
+}
 
 export default Col;

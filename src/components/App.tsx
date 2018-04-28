@@ -12,8 +12,9 @@ class App extends Component<{}, {}> {
                     <sub>with Bootstrap4 and font-awesome managed by Yarn!</sub>
                 </Bs4.Jumbotron>
                 <Bs4.Row>
-                    <Bs4.Col md={5}>Hi from first</Bs4.Col>
-                    <Bs4.Col md={5}>Hi from second</Bs4.Col>
+                    <Bs4.Col>Hi from first</Bs4.Col>
+                    <Bs4.Col md={3}>Hi from second</Bs4.Col>
+                    <Bs4.Col md={"auto"}>Hi from second</Bs4.Col>
                 </Bs4.Row>
             </Bs4.ContainerFluid>
         );
