@@ -1,4 +1,6 @@
 import * as React from "react";
+import * as helper from "./../helpers/StatelessHelper";
+import { default as Props } from "./../interfaces/IComponentProps";
 
 interface IProps {
     children: React.ReactNode;
@@ -7,13 +9,8 @@ interface IProps {
 }
 
 const ContainerFluid: React.StatelessComponent<IProps> = (prop) => {
-    let applyClass = "";
-    if (!!prop.applyClass) {
-        applyClass =  ` ${prop.applyClass}`; 
-    }
-
     return (
-        <div id={prop.id} className={"container-fluid" + applyClass}>
+        <div id={prop.id} className={"container-fluid" + helper.mergeClassName(prop.applyClass)}>
             {prop.children}
         </div>
     );

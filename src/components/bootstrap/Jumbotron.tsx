@@ -1,18 +1,10 @@
 import * as React from "react";
+import * as helper from "./helpers/StatelessHelper";
+import { default as Props } from "./interfaces/IComponentProps";
 
-interface IProps {
-    children: React.ReactNode;
-    applyClass?: string;
-    id?: string;
-}
-const Jumbotron: React.StatelessComponent<IProps> = (prop) => {
-    let applyClass = "";
-    if (!!prop.applyClass) {
-        applyClass =  ` ${prop.applyClass}`; 
-    }
-
+const Jumbotron: React.StatelessComponent<Props> = (prop) => {
     return (
-        <div id={prop.id} className={"jumbotron" + applyClass}>
+        <div id={prop.id} className={"jumbotron" + helper.mergeClassName(prop.applyClass)}>
             {prop.children}
         </div>
         );

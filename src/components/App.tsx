@@ -11,6 +11,10 @@ class App extends Component<{}, {}> {
                     <h1>React App on TypeScript</h1>
                     <sub>with Bootstrap4 and font-awesome managed by Yarn!</sub>
                 </Bs4.Jumbotron>
+                <Bs4.Row>
+                    <Bs4.Col md={5}>Hi from first</Bs4.Col>
+                    <Bs4.Col md={5}>Hi from second</Bs4.Col>
+                </Bs4.Row>
             </Bs4.ContainerFluid>
         );
     }
