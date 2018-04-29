@@ -1,13 +1,15 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
 import Col from "./Col";
 
 describe("<Col />", () => {
 
     it("No params -> class='col'", () => {
-        const component = shallow(<Col>hi</Col>);
-        expect(true).toBe(component.hasClass("col"));
+        const component = shallow(<Col>hi!</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
     });
 
     it("col='1' -> class='col-1'", () => {
