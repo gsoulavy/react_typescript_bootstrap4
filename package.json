@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
     "@types/jest": "^22.2.3",
     "@types/react": "^16.3.12",
     "@types/react-dom": "^16.0.5",
@@ -22,6 +23,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "exports-loader": "^0.7.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -51,6 +53,7 @@
   },
   "dependencies": {},
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -62,7 +65,7 @@
     },
     "testMatch": [
       "**/tests/*.spec.+(ts|tsx|js)",
-      "**/src/**/*.spec.+(ts|tsx|js)"
+      "**/src/**/*.test.+(ts|tsx|js)"
     ]
   }
 }
