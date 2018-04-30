@@ -9,6 +9,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: ['tether', 'font-awesome/scss/font-awesome.scss', './src/style/main.scss', './src/index.tsx'],
     devtool: 'source-map',
+    devServer: {
+        historyApiFallback: true,
+        port: 9000
+    },
     output: {
         path: path.join(__dirname, '/wwwroot'),
         filename: 'index.bundle.js' 
