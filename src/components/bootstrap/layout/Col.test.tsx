@@ -14,7 +14,7 @@ describe("<Col />", () => {
 
     it("col='1' -> class='col-1'", () => {
         const component = shallow(<Col col={1}>hi</Col>);
-        expect(true).toBe(component.hasClass("col-1"));
+        expect(component.hasClass("col-1")).toBe(true);
     });
 
     it("col='auto' -> class='col-auto'", () => {

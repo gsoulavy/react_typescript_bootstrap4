@@ -1,7 +1,7 @@
 import * as React from "react";
-import * as Bs4 from "./bootstrap/Bootstrap";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Jumbo from "./jumbotron/jumbo";
+import Jumbotron from "./styles/Jumbotron";
+import Intro from "./Intro";
 const { Component } = React;
 
 class App extends Component<{}, {}> {
@@ -9,26 +9,30 @@ class App extends Component<{}, {}> {
         return (
             <Router>
                 <div>
-                    <div>Before links</div>
-                    <Link to="/home">Home</Link>
-                    <Link to="/jumbotron">Jumbi</Link>
-                    <Link to={`/tosome/${5}`}>5</Link>
-                    <div>After links</div>
-                    <Route path="/jumbotron" component={Jumbo} />
-                    <Route path="/tosome/:id" component={Some} />
-                    <Route path="/home" render={() => <div>Home</div>}/>
-                    <div>After routes</div>
+                    <nav className="nav navbar-expand-lg navbar-light bg-light mb-4">
+                        <a className="navbar-brand" href="#">Bootstrap4</a>
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/">Intro</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/styles">Styles</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link" to={`/layout`}>Layout</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <Route exact path="/" component={Intro}/>
+                    <Route path="/styles" component={Jumbotron} />
+                    <Route path="/layout" render={() => (
+                        <h1>Bootstrap Layout</h1>
+                    )}/>
+
                 </div>
             </Router>
         );
     }
-}
-
-const Some = ({ match }) => {
-    return (
-        <div>
-            The id is: {match.params.id}
-        </div>);
 }
 
 export default App;
