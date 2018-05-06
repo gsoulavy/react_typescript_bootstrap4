@@ -36,7 +36,7 @@ const Col: React.StatelessComponent<Props> = (prop) => {
     }
 
     if (!!prop.lg) {
-        classResult += ` ${buildClassAttribute("ls", prop.lg)}`;
+        classResult += ` ${buildClassAttribute("lg", prop.lg)}`;
     }
 
     if (!!prop.xl) {

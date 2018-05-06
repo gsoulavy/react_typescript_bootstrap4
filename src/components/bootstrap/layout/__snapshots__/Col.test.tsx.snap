@@ -4,6 +4,30 @@ exports[`<Col /> No params -> class='col' 1`] = `
 <div
   className="col"
 >
-  hi!
+  hi
+</div>
+`;
+
+exports[`<Col /> col='1' -> class='col-1' 1`] = `
+<div
+  className="col-1"
+>
+  hi
+</div>
+`;
+
+exports[`<Col /> col='auto' -> class='col-auto' 1`] = `
+<div
+  className="col-auto"
+>
+  hi
+</div>
+`;
+
+exports[`<Col /> sm={true} -> class='col-sm' 1`] = `
+<div
+  className="col-sm"
+>
+  hi
 </div>
 `;

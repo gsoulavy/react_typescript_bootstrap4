@@ -1,11 +1,11 @@
-import J from "./Jumbotron";
-import C from "./layout/Container";
-import CF from "./layout/ContainerFluid";
-import R from "./layout/Row";
-import Cl from "./layout/Col";
+import jumbotron from "./layout/Jumbotron";
+import container from "./layout/Container";
+import containerFluid from "./layout/ContainerFluid";
+import row from "./layout/Row";
+import col from "./layout/Col";
 
-export const Jumbotron = J;
-export const Container = C;
-export const ContainerFluid = CF;
-export const Row = R;
-export const Col = Cl;
+export const Jumbotron = jumbotron;
+export const Container = container;
+export const ContainerFluid = containerFluid;
+export const Row = row;
+export const Col = col;

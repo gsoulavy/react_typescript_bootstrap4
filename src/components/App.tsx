@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Jumbotron from "./styles/Jumbotron";
-import Intro from "./Intro";
+import IntroPage from "./IntroPage";
+import LayoutPage from "./LayoutPage";;
 const { Component } = React;
 
 class App extends Component<{}, {}> {
@@ -16,19 +16,12 @@ class App extends Component<{}, {}> {
                                 <Link className="nav-link" to="/">Intro</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/styles">Styles</Link>
-                            </li>
-                            <li className="nav-item">
-                            <Link className="nav-link" to={`/layout`}>Layout</Link>
+                                <Link className="nav-link" to="/layout">Layout</Link>
                             </li>
                         </ul>
                     </nav>
-                    <Route exact path="/" component={Intro}/>
-                    <Route path="/styles" component={Jumbotron} />
-                    <Route path="/layout" render={() => (
-                        <h1>Bootstrap Layout</h1>
-                    )}/>
-
+                    <Route exact path="/" component={IntroPage}/>
+                    <Route path="/layout" component={LayoutPage} />
                 </div>
             </Router>
         );
