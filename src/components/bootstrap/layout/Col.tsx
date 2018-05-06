@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as helper from "./../helpers/StatelessHelper";
 import * as SuperProps  from "./../interfaces/IComponentProps";
+import AlignSelf from "./enums/AlignSelf";
 
 interface Props extends SuperProps.default {
     col?: number | boolean | string;
@@ -8,6 +9,7 @@ interface Props extends SuperProps.default {
     md?: number | boolean | string;
     lg?: number | boolean | string;
     xl?: number | boolean | string;
+    align?: AlignSelf;
 }
 
 const Col: React.StatelessComponent<Props> = (prop) => {
@@ -48,7 +50,7 @@ const Col: React.StatelessComponent<Props> = (prop) => {
     }
 
     return (
-        <div className={`${classResult}${helper.mergeClassName(prop.applyClass)}`.trim()}>{prop.children}</div>
+        <div className={`${classResult}${helper.mergeClassName(prop.align)}${helper.mergeClassName(prop.applyClass)}`.trim()}>{prop.children}</div>
     );
 };
 

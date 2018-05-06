@@ -26,7 +26,6 @@ describe("<Row />", () => {
 
     it("applyClass='main' + align='Start' -> class='row align-item-start'", () => {
         const component = shallow(<Row applyClass="main" align={ AlignItem.Start }>hi</Row>)
-        console.log(toJson(component));
         const tree = toJson(component);
         expect(tree).toMatchSnapshot();
     });

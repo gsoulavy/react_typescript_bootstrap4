@@ -2,6 +2,7 @@ import * as React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import Col from "./Col";
+import AlignSelf from "./enums/AlignSelf";
 
 describe("<Col />", () => {
 
@@ -36,10 +37,21 @@ describe("<Col />", () => {
     });
 
     it("col='true' lg={2} md='auto' -> class='col col-md-auto col-lg-2", () => {
-        const component = shallow(<Col col={true} md="auto" lg={2}>hi</Col>)
-        expect(component.hasClass("col")).toBe(true);
-        expect(component.hasClass("col-md-auto")).toBe(true);
-        expect(component.hasClass("col-lg-2")).toBe(true);
+        const component = shallow(<Col col={true} md="auto" lg={2}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("align={AlignSelf.End} -> class='col align-self-end'", () => {
+        const component = shallow(<Col align={AlignSelf.End}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("align={AlignSelf.End} applyClass='some' -> class='col align-self-end some'", () => {
+        const component = shallow(<Col align={AlignSelf.End} applyClass="some">hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
     });
 
 });

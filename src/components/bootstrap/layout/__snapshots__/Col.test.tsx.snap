@@ -8,6 +8,22 @@ exports[`<Col /> No params -> class='col' 1`] = `
 </div>
 `;
 
+exports[`<Col /> align={AlignSelf.End} -> class='col align-self-end' 1`] = `
+<div
+  className="col align-self-end"
+>
+  hi
+</div>
+`;
+
+exports[`<Col /> align={AlignSelf.End} applyClass='some' -> class='col align-self-end some' 1`] = `
+<div
+  className="col align-self-end some"
+>
+  hi
+</div>
+`;
+
 exports[`<Col /> col='1' -> class='col-1' 1`] = `
 <div
   className="col-1"
@@ -19,6 +35,14 @@ exports[`<Col /> col='1' -> class='col-1' 1`] = `
 exports[`<Col /> col='auto' -> class='col-auto' 1`] = `
 <div
   className="col-auto"
+>
+  hi
+</div>
+`;
+
+exports[`<Col /> col='true' lg={2} md='auto' -> class='col col-md-auto col-lg-2 1`] = `
+<div
+  className="col col-md-auto col-lg-2"
 >
   hi
 </div>
