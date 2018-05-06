@@ -4,7 +4,7 @@ import { default as Props } from "./../interfaces/IComponentProps";
 
 const Container: React.StatelessComponent<Props> = (prop) => {
     return (
-        <div id={prop.id} className={"container" + helper.mergeClassName(prop.applyClass)}>
+        <div id={prop.id} className={"container" + helper.mergeClass(prop.applyClass)}>
             {prop.children}
         </div>
     );

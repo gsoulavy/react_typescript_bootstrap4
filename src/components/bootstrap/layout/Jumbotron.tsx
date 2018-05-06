@@ -4,7 +4,7 @@ import { default as Props } from "./../interfaces/IComponentProps";
 
 const Jumbotron: React.StatelessComponent<Props> = (prop) => {
     return (
-        <div id={prop.id} className={"jumbotron" + helper.mergeClassName(prop.applyClass)}>
+        <div id={prop.id} className={"jumbotron" + helper.mergeClass(prop.applyClass)}>
             {prop.children}
         </div>
         );

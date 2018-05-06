@@ -1,7 +1,3 @@
-export const mergeClassName = (className?: string) => {
-    let applyClass = "";
-    if (!!className) {
-        applyClass =  ` ${className.trim()}`; 
-    }
-    return applyClass;
+export const mergeClass = (className?: string) => {
+    return className ? ` ${className}` : "";
 }

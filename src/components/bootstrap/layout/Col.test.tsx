@@ -54,5 +54,17 @@ describe("<Col />", () => {
         expect(tree).toMatchSnapshot();
     });
 
+    it("sm={true} order={1} -> class='col-sm order=1'", () => {
+        const component = shallow(<Col sm={true} order={1}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("sm={true} orderSm={1} orderLg={5}-> class='col-sm order-sm-1 order-lg-5'", () => {
+        const component = shallow(<Col sm={true} orderSm={1} orderLg={5} orderMd={3}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
 });
 

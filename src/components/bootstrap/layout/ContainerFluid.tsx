@@ -4,7 +4,7 @@ import { default as Props } from "./../interfaces/IComponentProps";
 
 const ContainerFluid: React.StatelessComponent<Props> = (prop) => {
     return (
-        <div id={prop.id} className={"container-fluid" + helper.mergeClassName(prop.applyClass)}>
+        <div id={prop.id} className={"container-fluid" + helper.mergeClass(prop.applyClass)}>
             {prop.children}
         </div>
     );

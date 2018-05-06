@@ -1,15 +1,16 @@
 import * as React from "react";
 import * as helper from "./../helpers/StatelessHelper";
-import ComponentProps from "./../interfaces/IComponentProps";
+import IComponentProps from "./../interfaces/IComponentProps";
 import AlignItem from "./enums/AlignItem";
+import JustifyContent from "./enums/JustifyContent";
 
-interface Props extends ComponentProps {
-    align?: AlignItem
+interface IProps extends IComponentProps {
+    align?: AlignItem | JustifyContent
 }
 
-const Row : React.StatelessComponent<Props> = (prop) => {
+const Row : React.StatelessComponent<IProps> = (prop) => {
     return (
-        <div className={`row${helper.mergeClassName(prop.align)}${helper.mergeClassName(prop.applyClass)}`.trim()}>
+        <div className={`row${helper.mergeClass(prop.align)}${helper.mergeClass(prop.applyClass)}`.trim()}>
             {prop.children}
         </div>
     );
