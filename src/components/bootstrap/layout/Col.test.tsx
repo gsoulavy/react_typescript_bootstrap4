@@ -12,14 +12,26 @@ describe("<Col />", () => {
         expect(tree).toMatchSnapshot();
     });
 
+    it("offset={2} -> class='col offset-3'", () => {
+        const component = shallow(<Col offset={3}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
     it("No params + applyClass='main' -> class='col main'", () => {
         const component = shallow(<Col applyClass="main">hi</Col>);
-        expect(component.hasClass("col")).toBe(true);
-        expect(component.hasClass("main")).toBe(true);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
     });
 
     it("col='1' -> class='col-1'", () => {
         const component = shallow(<Col col={1}>hi</Col>);
+        const tree = toJson(component);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("col='1' offsetLg={4} -> class='col-1 offset-lg-4'", () => {
+        const component = shallow(<Col col={1} offsetLg={4}>hi</Col>);
         const tree = toJson(component);
         expect(tree).toMatchSnapshot();
     });

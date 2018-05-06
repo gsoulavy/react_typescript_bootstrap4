@@ -15,11 +15,16 @@ interface IProps extends IComponentProps {
     orderMd?: number;
     orderLg?: number;
     orderXl?: number;
+    offset?: number;
+    offsetSm?: number;
+    offsetMd?: number;
+    offsetLg?: number;
+    offsetXl?: number;
 }
 
 const Col: React.StatelessComponent<IProps> = (prop) => {
     return (
-        <div className={`${getColumnClass(prop)}${helper.mergeClass(prop.align)}${getOrderClass(prop)}${helper.mergeClass(prop.applyClass)}`.trim()}>{prop.children}</div>
+        <div className={`${getColumnClass(prop)}${getOffsetClass(prop)}${helper.mergeClass(prop.align)}${getOrderClass(prop)}${helper.mergeClass(prop.applyClass)}`.trim()}>{prop.children}</div>
     );
 };
 
@@ -73,6 +78,31 @@ function getOrderClass(prop: IProps){
 
     if (!!prop.orderXl) {
         order += buildClassAttribute("order", "xl", prop.orderXl);
+    }
+
+    return order;
+}
+
+function getOffsetClass(prop: IProps){
+    let order = "";
+    if (!!prop.offset) {
+        order = buildClassAttribute("offset", null, prop.offset);
+    }
+
+    if (!!prop.offsetSm) {
+        order += buildClassAttribute("offset", "sm", prop.offsetSm);
+    }
+
+    if (!!prop.offsetMd) {
+        order += buildClassAttribute("offset", "md", prop.offsetMd);
+    }
+
+    if (!!prop.offsetLg) {
+        order += buildClassAttribute("offset", "lg", prop.offsetLg);
+    }
+
+    if (!!prop.offsetXl) {
+        order += buildClassAttribute("offset", "xl", prop.offsetXl);
     }
 
     return order;

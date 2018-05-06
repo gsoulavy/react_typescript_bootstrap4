@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Col /> No params + applyClass='main' -> class='col main' 1`] = `
+<div
+  className="col main"
+>
+  hi
+</div>
+`;
+
 exports[`<Col /> No params -> class='col' 1`] = `
 <div
   className="col"
@@ -32,6 +40,14 @@ exports[`<Col /> col='1' -> class='col-1' 1`] = `
 </div>
 `;
 
+exports[`<Col /> col='1' offsetLg={4} -> class='col-1 offset-lg-4' 1`] = `
+<div
+  className="col-1 offset-lg-4"
+>
+  hi
+</div>
+`;
+
 exports[`<Col /> col='auto' -> class='col-auto' 1`] = `
 <div
   className="col-auto"
@@ -43,6 +59,14 @@ exports[`<Col /> col='auto' -> class='col-auto' 1`] = `
 exports[`<Col /> col='true' lg={2} md='auto' -> class='col col-md-auto col-lg-2 1`] = `
 <div
   className="col col-md-auto col-lg-2"
+>
+  hi
+</div>
+`;
+
+exports[`<Col /> offset={2} -> class='col offset-3' 1`] = `
+<div
+  className="col offset-3"
 >
   hi
 </div>
