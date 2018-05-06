@@ -15,9 +15,31 @@ const IntroPage: React.StatelessComponent<{}> = () => {
                             <span className="nt">&lt;Container </span>
                             <span className="na">className=</span>
                             <span className="s">"main"</span>
-                            <span className="nt">&gt;</span>
-                            One of three columns
-                            <span className="nt">&lt;/Container&gt;</span>
+                            <span className="nt">&gt;</span><br/><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;Row </span>
+                            <span className="na">className=</span>
+                            <span className="s">"row"</span>
+                            <span className="nt">&gt;</span><br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;Col </span>
+                            <span className="na">className=</span>
+                            <span className="s">"col align-self-start"</span>
+                            <span className="nt">&gt;</span><br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            One of three columns<br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;/Col&gt;</span><br/><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;Col </span>
+                            <span className="na">className=</span>
+                            <span className="s">"col align-self-center"</span>
+                            <span className="nt">&gt;</span><br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            One of three columns<br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;/Col&gt;</span><br/><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;Col </span>
+                            <span className="na">className=</span>
+                            <span className="s">"col align-self-end"</span>
+                            <span className="nt">&gt;</span><br/><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+                            One of three columns<br/><span>&nbsp;&nbsp;</span>
+                            <span className="nt">&lt;/Col&gt;</span>
+                            <span className="nt">&lt;/Row&gt;</span><br/>
+                            <span className="nt">&lt;/Container&gt;</span><br/>
                         </code>
                     </pre>
                 </div>
