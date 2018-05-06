@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row /> align='Start' -> class='row align-item-start' 1`] = `
+<div
+  className="row align-items-start"
+>
+  hi
+</div>
+`;
+
+exports[`<Row /> applyClass='main' + align='Start' -> class='row align-item-start' 1`] = `
+<div
+  className="row align-items-start main"
+>
+  hi
+</div>
+`;
+
+exports[`<Row /> applyClass='main' -> class='row main' 1`] = `
+<div
+  className="row main"
+>
+  hi
+</div>
+`;
+
+exports[`<Row /> no params -> class='row' 1`] = `
+<div
+  className="row"
+>
+  hi
+</div>
+`;

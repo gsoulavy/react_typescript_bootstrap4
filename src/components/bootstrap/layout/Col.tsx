@@ -48,7 +48,7 @@ const Col: React.StatelessComponent<Props> = (prop) => {
     }
 
     return (
-        <div className={helper.mergeClassName(classResult).trim()}>{prop.children}</div>
+        <div className={`${classResult}${helper.mergeClassName(prop.applyClass)}`.trim()}>{prop.children}</div>
     );
 };
 

@@ -8,7 +8,7 @@ const LayoutPage: React.StatelessComponent<{}> = () => {
             <Container applyClass="">
                 <Jumbotron>
                     <h1>Layout</h1>
-                    <sub>With bootstrap 4</sub>
+                    <sub>with bootstrap 4</sub>
                 </Jumbotron>
             </Container>
         </div>

@@ -11,6 +11,12 @@ describe("<Col />", () => {
         expect(tree).toMatchSnapshot();
     });
 
+    it("No params + applyClass='main' -> class='col main'", () => {
+        const component = shallow(<Col applyClass="main">hi</Col>);
+        expect(component.hasClass("col")).toBe(true);
+        expect(component.hasClass("main")).toBe(true);
+    });
+
     it("col='1' -> class='col-1'", () => {
         const component = shallow(<Col col={1}>hi</Col>);
         const tree = toJson(component);
