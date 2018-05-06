@@ -9,16 +9,18 @@ const IntroPage: React.StatelessComponent<{}> = () => {
                 <h1>Bootstrap 4 components with React and Typescript</h1>
             </Jumbotron>
             <Container>
-                <code className="language-html" data-lang="html">
-                    <div>
-                        <span className="nt">&lt;div</span>
-                        <span className="na">class=</span>
-                        <span className="s">"col"</span>
-                        <span className="nt">&gt;</span>
-                        One of three columns
-                    <span className="nt">&lt;/div&gt;</span>
-                    </div>
-                </code>
+                <div className="highlight">
+                    <pre>
+                        <code className="language-html" data-lang="html">
+                            <span className="nt">&lt;Container </span>
+                            <span className="na">className=</span>
+                            <span className="s">"main"</span>
+                            <span className="nt">&gt;</span>
+                            One of three columns
+                            <span className="nt">&lt;/Container&gt;</span>
+                        </code>
+                    </pre>
+                </div>
             </Container>
         </Container>
     );

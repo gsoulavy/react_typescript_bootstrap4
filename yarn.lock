@@ -1243,6 +1243,10 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
+bootstrap-docs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-docs/-/bootstrap-docs-1.0.0.tgz#e48bb636d0c4a892eca9544b417d0a8651a81d14"
+
 bootstrap@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.0.tgz#110b05c31a236d56dbc9adcda6dd16f53738a28a"
